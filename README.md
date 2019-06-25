@@ -73,8 +73,12 @@ Try "amplify add api" to create a backend API and then "amplify publish" to depl
 - build app frontend and backend resources and provision them in the cloud \
 `amplify publish`
 
-- buid app backend resources and provision them in the cloud
+- buid app backend resources and provision them in the cloud \
 `amplify push`
 
-- add authentication backend to app
+- add authentication backend to app \
 ` amplify add auth`
+
+#### Resolve easy problems
+- encountered a issue when adding `amplify add auth` \
+Fixed by adding aws amplify and aws amplify react packages in yarn `yarn add aws-amplify` `yarn add aws-amplify-react`

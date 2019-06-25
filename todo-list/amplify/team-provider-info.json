@@ -9,6 +9,11 @@
             "UnauthRoleName": "todo-list-todolist-20190625114940-unauthRole",
             "StackName": "todo-list-todolist-20190625114940",
             "StackId": "arn:aws:cloudformation:us-east-1:629162878034:stack/todo-list-todolist-20190625114940/3a1648d0-9769-11e9-aa0c-128a65397f5a"
+        },
+        "categories": {
+            "auth": {
+                "todolist427882b4": {}
+            }
         }
     }
 }

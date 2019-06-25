@@ -13,13 +13,17 @@ class App extends Component{
       ]
     }
   }
+  // Todo List
   render(){
     return (
       <div className="App">
         <main>
-          // ... todo list goes here
-          <h1>TODO List</h1>
-          <TodoList items={this.state.items} />
+          <div className='App-header'>
+            <h1> Todo List</h1>
+          </div>
+          <div className='App-list'>
+            <TodoList items={this.state.items} />
+          </div>
         </main>
       </div>
     );

@@ -28,7 +28,7 @@ class App extends Component{
       </div>
     );
   }
-}
+} /// end Class App
 
 // TodoList class that lists out a set of TodoItem Components
 class TodoList extends Component {
@@ -45,10 +45,9 @@ class TodoList extends Component {
       </div>
     )
   }
-}
+} // End Class TodoList
 
-
-//
+// component for the actual list item with checkbox
 class TodoItem extends Component {
   render() {
     const item = this.props.item;
@@ -59,8 +58,7 @@ class TodoItem extends Component {
       </li>
     )
   }
-}
-
+} // End Class TodoItem
 
 
 export default App;

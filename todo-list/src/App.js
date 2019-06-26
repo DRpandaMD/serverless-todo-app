@@ -4,6 +4,7 @@ import './App.css';
 
 // From AWS Amplify 
 import Amplify, { Auth } from 'aws-amplify';
+import { withAuthenticator } from 'aws-amplify-react';
 import awsconfig from './aws-exports';
 Amplify.configure(awsconfig);
 
@@ -66,4 +67,4 @@ class TodoItem extends Component {
 } // End Class TodoItem
 
 
-export default App;
+export default withAuthenticator(App);

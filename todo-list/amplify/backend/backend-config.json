@@ -6,7 +6,7 @@
 		}
 	},
 	"auth": {
-		"todolist427882b4": {
+		"todolistb4ea898c": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}

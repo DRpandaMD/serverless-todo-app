@@ -19,6 +19,12 @@ class App extends Component{
       ]
     }
   }
+
+  logout = () => {
+    Auth.signOut()
+    window.location.reload();
+  }
+
   // Todo List
   render(){
     return (
@@ -31,6 +37,7 @@ class App extends Component{
             <TodoList items={this.state.items} />
           </div>
         </main>
+        <button onClick={this.logout}>Log Out</button>
       </div>
     );
   }

@@ -3,20 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 // From AWS Amplify 
-import Amplify, { Auth } from 'aws-amplify';
+import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify';
 import { withAuthenticator } from 'aws-amplify-react';
+
+import * as queries from './graphql/queries'
 import awsconfig from './aws-exports';
+
 Amplify.configure(awsconfig);
 
 class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      items: [
-        { name: "Feed the cat", status: "NEW" },
-        { name: "Discover purpose of life", status: "NEW" },
-        { name: "Learn to Cloud", status: "NEW" }
-      ]
+      items: []
     }
   }
 
@@ -24,6 +23,19 @@ class App extends Component{
     Auth.signOut()
     window.location.reload();
   }
+
+  // get Todo List from the GraphQL API's provided
+  getToDos = async () => {
+    const result = await API.graphql(graphqlOperation(queries.listTodos))
+
+    this.setState({items: result.data.listTodos.items});
+  }
+
+  // call getTodos() for the app class component 
+  componentDidMount() {
+    this.getToDos();
+  }
+
 
   // Todo List
   render(){

@@ -84,10 +84,12 @@ class App extends Component{
           <div className='App-list'>
             <TodoList items={this.state.items} />
             <input type='text' ref="newTodo" />
-            <button onClick={this.addTodo}>Add Todo</button>
+            <button className='button' onClick={this.addTodo}>Add Todo</button>
           </div>
         </main>
-        <button onClick={this.logout}>Log Out</button>
+          <div className='App-logout-button'>
+            <button className='button' onClick={this.logout}>Log Out</button>
+          </div>
       </div>
     );
   }

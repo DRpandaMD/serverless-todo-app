@@ -30,6 +30,36 @@
   color: white;
 }
 
+.App-logout-button
+{
+  background-color: #152939;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; 
+}
+
+.button {
+  background-color: #ff9900; /* orange */
+  border: darkgray;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 .App-link {
   color: #61dafb;
 }
